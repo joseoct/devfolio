@@ -2,7 +2,7 @@
   "name": "ghp-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./ghp-portfolio",
+  "homepage": "ghp-portfolio/",
   "dependencies": {
     "@chakra-ui/react": "^2.0.0",
     "@emotion/react": "^11",
