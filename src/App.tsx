@@ -1,10 +1,23 @@
-import { Box, Flex, HStack, VStack } from '@chakra-ui/react';
+import { Flex, HStack, VStack } from '@chakra-ui/react';
 import { faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { useEffect, useState } from 'react';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
+import { HeaderContent } from './components/HeaderContent';
 import { Social } from './components/Social';
 
 
 function App() {
+
+  const [showSections, setShowSections] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      return (
+        setShowSections(true)
+      )
+    }, 2500)
+  },[])
+
   return (
     <Flex direction="column">
       <HStack
@@ -13,10 +26,15 @@ function App() {
         justifyContent="space-between"
         p={16}
       >
-        <Box>Informações</Box>
-        
+        <HStack transform="rotate(-90deg)" m={-40} gap={4}>
+          <HeaderContent href="#section" label="Sobre mim" />
+          <HeaderContent href="#section" label="Habilidades" />
+          <HeaderContent href="#section" label="Portfólio" />
+        </HStack>
+
         <VStack align="start">
           <DencryptTextEffect
+            inverted
             fontSize="4xl"
             values={['José Octávio']}
             time={0}
@@ -24,19 +42,19 @@ function App() {
           <DencryptTextEffect
             fontSize="8xl"
             fontWeight="bold"
-            values={['In']}
-            time={2000}
+            values={['Full Stack']}
+            time={1500}
           />
           <DencryptTextEffect
             fontSize="8xl"
             fontWeight="bold"
-            values={['Progress']}
-            time={2000}
+            values={['Developer']}
+            time={1500}
           />
           <DencryptTextEffect
             fontSize="xl"
             values={['NodeJS', 'ReactJS', 'React-Native']}
-            time={3000}
+            time={2500}
           />
         </VStack>
 
@@ -58,6 +76,18 @@ function App() {
           />
         </VStack>
       </HStack>
+
+      {showSections && (
+        <Flex
+          id="section1"
+          h="100vh"
+          alignItems="center"
+          justifyContent="space-between"
+          p={16}
+        >
+          Oi
+        </Flex>
+      )}
     </Flex>
   );
 }

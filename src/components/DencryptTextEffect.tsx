@@ -1,5 +1,5 @@
-import { Text } from '@chakra-ui/react';
-import { useEffect } from "react";
+import { Collapse, Fade, ScaleFade, Slide, SlideFade, Text } from '@chakra-ui/react';
+import { useEffect, useState } from "react";
 import { useDencrypt } from "use-dencrypt-effect";
 
  
@@ -8,32 +8,43 @@ interface DencryptTextEffectProps {
   fontSize?: string;
   time: number;
   fontWeight?: string;
+  inverted?: boolean;
 }
  
-export const DencryptTextEffect = ({ values, fontSize, time, fontWeight }: DencryptTextEffectProps) => {
+export const DencryptTextEffect = ({
+  values,
+  fontSize,
+  time,
+  fontWeight,
+  inverted,
+}: DencryptTextEffectProps) => {
   const { result, dencrypt } = useDencrypt();
- 
+
   useEffect(() => {
     let i = 0;
- 
+
     const action = setInterval(() => {
       dencrypt(values[i]);
- 
+
       i = i === values.length - 1 ? 0 : i + 1;
     }, time);
- 
+
     return () => clearInterval(action);
   }, [dencrypt, values, time]);
- 
+
   return (
-    <Text
-      fontSize={fontSize}
-      fontWeight={fontWeight}
-      bgGradient="linear(to-r, #fe1700, #fa006b)"
-      textColor="#08081a"
-      p={result ? 2 : 0}
-    >
-      {result}
-    </Text>
+    <Collapse in={!!result}>
+      <Text
+        bgGradient="linear(to-l, #7928CA, #FF0080)"
+        textDecoration={inverted ? 'underline' : 'none'}
+        textDecorationColor={inverted ? '#fff' : 'none'}
+        bgClip={inverted ? 'text' : 'none'}
+        fontSize={fontSize}
+        fontWeight="bold"
+        p={result ? 2 : 0}
+      >
+        {result}
+      </Text>
+    </Collapse>
   );
 };
