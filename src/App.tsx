@@ -1,83 +1,54 @@
-import { Flex, HStack, VStack } from '@chakra-ui/react';
-import { faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { Fade, Flex, HStack, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
-import { HeaderContent } from './components/HeaderContent';
-import { Social } from './components/Social';
+import { Header } from './components/Header';
 
 
 function App() {
 
-  const [showSections, setShowSections] = useState(false);
+  const [showContent, setShowContent] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       return (
-        setShowSections(true)
+        setShowContent(true)
       )
-    }, 2500)
+    }, 3000)
   },[])
 
   return (
     <Flex direction="column">
-      <HStack
-        h="100vh"
-        alignItems="center"
-        justifyContent="space-between"
-        p={16}
-      >
-        <HStack transform="rotate(-90deg)" m={-40} gap={4}>
-          <HeaderContent href="#section" label="Sobre mim" />
-          <HeaderContent href="#section" label="Habilidades" />
-          <HeaderContent href="#section" label="Portfólio" />
-        </HStack>
+      <Fade in={showContent}>
+        <Header />
+      </Fade>
 
+      <HStack h="100vh" alignItems="center" justifyContent="center" p={16}>
         <VStack align="start">
           <DencryptTextEffect
             inverted
-            fontSize="4xl"
+            fontSize={['2xl', '3xl']}
             values={['José Octávio']}
             time={0}
           />
           <DencryptTextEffect
-            fontSize="8xl"
-            fontWeight="bold"
+            fontSize={['4xl', '5xl', '8xl']}
             values={['Full Stack']}
             time={1500}
           />
           <DencryptTextEffect
-            fontSize="8xl"
-            fontWeight="bold"
+            fontSize={['4xl', '5xl', '8xl']}
             values={['Developer']}
             time={1500}
           />
           <DencryptTextEffect
-            fontSize="xl"
+            fontSize={['xl', '2xl']}
             values={['NodeJS', 'ReactJS', 'React-Native']}
-            time={2500}
-          />
-        </VStack>
-
-        <VStack spacing={4}>
-          <Social
-            label="Github"
-            href="https://github.com/joseoct"
-            icon={faGithub}
-          />
-          <Social
-            label="LinkedIn"
-            href="https://linkedin.com/in/josé-octávio-8931b41a8"
-            icon={faLinkedin}
-          />
-          <Social
-            label="WhatsApp"
-            href="https://github.com/joseoct"
-            icon={faWhatsapp}
+            time={1500}
           />
         </VStack>
       </HStack>
 
-      {showSections && (
+      {showContent && (
         <Flex
           id="section1"
           h="100vh"

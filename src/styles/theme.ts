@@ -12,7 +12,9 @@ export const theme = extendTheme({
   //     }
   //   }
   // },
-
+  config: {
+    initialColorMode: 'dark',
+  },
   fonts: {
     heading: 'League Spartan',
     body: 'League Spartan',

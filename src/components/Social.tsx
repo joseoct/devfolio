@@ -1,7 +1,6 @@
-import { Fade, Link, Tooltip } from "@chakra-ui/react";
+import { Link, Tooltip } from "@chakra-ui/react";
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useEffect, useState } from "react";
 
 interface SocialProps {
   label: string;
@@ -10,24 +9,17 @@ interface SocialProps {
 }
 
 export function Social({ label, href, icon }: SocialProps) {
-
-  const [showSocials, setShowSocials] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      return (
-        setShowSocials(true)
-      )
-    }, 2500)
-  },[])
-
   return (
-    <Fade in={showSocials}>
-      <Tooltip label={label} placement="left">
-        <Link href={href} target="_blank">
-          <FontAwesomeIcon size="2x" icon={icon} />
-        </Link>
-      </Tooltip>
-    </Fade>
+    <Tooltip label={label} placement="bottom">
+      <Link
+        _hover={{
+          textColor: 'purple.400',
+        }}
+        href={href}
+        target="_blank"
+      >
+        <FontAwesomeIcon size="2x" icon={icon} />
+      </Link>
+    </Tooltip>
   );
 }

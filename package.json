@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "ghp-portfolio/",
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.0",
     "@chakra-ui/react": "^2.0.0",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",

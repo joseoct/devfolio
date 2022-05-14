@@ -1,13 +1,12 @@
-import { Collapse, Fade, ScaleFade, Slide, SlideFade, Text } from '@chakra-ui/react';
-import { useEffect, useState } from "react";
+import { Collapse, Text } from '@chakra-ui/react';
+import { useEffect } from "react";
 import { useDencrypt } from "use-dencrypt-effect";
 
  
 interface DencryptTextEffectProps {
   values: string[];
-  fontSize?: string;
+  fontSize?: string[];
   time: number;
-  fontWeight?: string;
   inverted?: boolean;
 }
  
@@ -15,7 +14,6 @@ export const DencryptTextEffect = ({
   values,
   fontSize,
   time,
-  fontWeight,
   inverted,
 }: DencryptTextEffectProps) => {
   const { result, dencrypt } = useDencrypt();
