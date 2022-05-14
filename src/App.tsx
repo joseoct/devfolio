@@ -1,8 +1,9 @@
-import { Fade, Flex, HStack, VStack } from '@chakra-ui/react';
+import { Fade, Flex, Image, HStack, VStack, Tooltip } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
 import { Header } from './components/Header';
 
+import { assets } from './assets';
 
 function App() {
 
@@ -56,7 +57,18 @@ function App() {
           justifyContent="space-between"
           p={16}
         >
-          Oi
+          {assets.map((asset, index) => (
+            <Tooltip label={asset.name}>
+              <Image
+                key={index}
+                src={asset.icon}
+                alt="logo"
+                maxW="100%"
+                maxH="100%"
+                objectFit="contain"
+              />
+            </Tooltip>
+          ))}
         </Flex>
       )}
     </Flex>
