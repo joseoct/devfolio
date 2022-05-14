@@ -1,19 +1,32 @@
 {
   "files": {
     "main.css": "/ghp-portfolio/static/css/main.a9dfb461.css",
-    "main.js": "/ghp-portfolio/static/js/main.12507a89.js",
+    "main.js": "/ghp-portfolio/static/js/main.ac1b353e.js",
     "static/js/787.ddf44fb6.chunk.js": "/ghp-portfolio/static/js/787.ddf44fb6.chunk.js",
+    "static/media/Angular.svg": "/ghp-portfolio/static/media/Angular.9ceedb6eadb6a7aabf5e769d5ed536db.svg",
+    "static/media/RestApi.svg": "/ghp-portfolio/static/media/RestApi.5d401a95ad7c8be03079e7f026704ef4.svg",
+    "static/media/Git.svg": "/ghp-portfolio/static/media/Git.6d5f392e339dab9e844541fa6ffc9f5b.svg",
+    "static/media/React.svg": "/ghp-portfolio/static/media/React.7e9026490b811f04b251706a803a8631.svg",
+    "static/media/Linux.svg": "/ghp-portfolio/static/media/Linux.116316fe9e17495c3e0c8a5a66d44dbd.svg",
+    "static/media/NodeJS.svg": "/ghp-portfolio/static/media/NodeJS.61732c70d1578432babc0d3d16c646ac.svg",
+    "static/media/ReactQuery.svg": "/ghp-portfolio/static/media/ReactQuery.acb5a2d287f60ee3a105b2a3dd379a1a.svg",
+    "static/media/NestJS.svg": "/ghp-portfolio/static/media/NestJS.92b97883de0d59cd28908e41377cab0e.svg",
     "static/media/league-spartan-all-400-normal.woff": "/ghp-portfolio/static/media/league-spartan-all-400-normal.bf111ce506915bfa3dde.woff",
+    "static/media/HTML.svg": "/ghp-portfolio/static/media/HTML.42c66046ae18a915fb324bfa97aca551.svg",
+    "static/media/CSS.svg": "/ghp-portfolio/static/media/CSS.e95e595e8dbffbbd0b0e7606695be75f.svg",
+    "static/media/Docker.svg": "/ghp-portfolio/static/media/Docker.689aa05f293dfa3d06d55855061cf167.svg",
+    "static/media/TypeScript.svg": "/ghp-portfolio/static/media/TypeScript.97289224cc0a53c0c38744bd8878fdcc.svg",
+    "static/media/JavaScript.svg": "/ghp-portfolio/static/media/JavaScript.dc87672a62e885106ee98a23904b6bd5.svg",
     "static/media/league-spartan-latin-400-normal.woff2": "/ghp-portfolio/static/media/league-spartan-latin-400-normal.c8d109e09266ef0ac82e.woff2",
     "static/media/league-spartan-latin-ext-400-normal.woff2": "/ghp-portfolio/static/media/league-spartan-latin-ext-400-normal.8be489024d61de2335de.woff2",
     "static/media/league-spartan-vietnamese-400-normal.woff2": "/ghp-portfolio/static/media/league-spartan-vietnamese-400-normal.3b851df0388bbcea0596.woff2",
     "index.html": "/ghp-portfolio/index.html",
     "main.a9dfb461.css.map": "/ghp-portfolio/static/css/main.a9dfb461.css.map",
-    "main.12507a89.js.map": "/ghp-portfolio/static/js/main.12507a89.js.map",
+    "main.ac1b353e.js.map": "/ghp-portfolio/static/js/main.ac1b353e.js.map",
     "787.ddf44fb6.chunk.js.map": "/ghp-portfolio/static/js/787.ddf44fb6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a9dfb461.css",
-    "static/js/main.12507a89.js"
+    "static/js/main.ac1b353e.js"
   ]
 }
