@@ -1,15 +1,10 @@
 import { HamburgerIcon } from "@chakra-ui/icons";
-import { Flex, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Text, useBreakpointValue } from "@chakra-ui/react";
+import { Flex, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
 import { faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
 import { Social } from "./Social";
 
 export function Header() {
-
-  const isMb = useBreakpointValue({
-    base: true,
-    sm: false,
-  });
 
   const [offsetY, setOffsetY] = useState(0);
   const header = useRef<HTMLDivElement>(null);
