@@ -26,14 +26,12 @@ export function Header() {
     <Flex
       ref={header}
       as="header"
-      maxWidth="100%"
-      w="100%"
-      mx="auto"
-      px="60"
-      py={4}
       position="fixed"
+      width="100%"
+      py={8}
+      px={[8, 20, 20, 20, 20]}
       alignItems="center"
-      justifyContent="space-between"
+      justifyContent="space-around"
     >
       <Flex gap={8} alignItems="center">
         <Text fontSize={24}>DevFolio</Text>

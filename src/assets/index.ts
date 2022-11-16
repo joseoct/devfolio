@@ -1,16 +1,17 @@
 import Angular from './Angular.svg';
-import CSS from './CSS.svg';
+import Css from './Css.svg';
 import Docker from './Docker.svg';
 import Git from './Git.svg';
-import HTML from './HTML.svg';
+import Html from './Html.svg';
 import JavaScript from './JavaScript.svg';
 import Linux from './Linux.svg';
-import NestJS from './NestJS.svg';
+// import NestJS from './NestJS.svg';
 import NodeJS from './NodeJS.svg';
 import ReactQuery from './ReactQuery.svg';
 import React from './React.svg';
 import RestApi from './RestApi.svg';
 import TypeScript from './TypeScript.svg';
+import Neovim from './Neovim.svg';
 
 export const assets = [
   {
@@ -18,8 +19,8 @@ export const assets = [
     icon: Angular,
   },
   {
-    name: 'CSS',
-    icon: CSS,
+    name: 'Css',
+    icon: Css,
   },
   {
     name: 'Docker',
@@ -30,8 +31,8 @@ export const assets = [
     icon: Git,
   },
   {
-    name: 'HTML',
-    icon: HTML,
+    name: 'Html',
+    icon: Html,
   },
   {
     name: 'JavaScript',
@@ -42,9 +43,13 @@ export const assets = [
     icon: Linux,
   },
   {
-    name: 'NestJS',
-    icon: NestJS,
+    name: 'Neovim',
+    icon: Neovim,
   },
+  // {
+  //   name: 'NestJS',
+  //   icon: NestJS,
+  // },
   {
     name: 'NodeJS',
     icon: NodeJS,
