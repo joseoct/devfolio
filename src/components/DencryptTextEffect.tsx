@@ -33,7 +33,8 @@ export const DencryptTextEffect = ({
   return (
     <Collapse in={!!result}>
       <Text
-        bgGradient="linear(to-l, #7928CA, #FF0080)"
+        // bgGradient="linear(to-l, #7928CA, #FF0080)"
+        bg="orange.300"
         textDecoration={inverted ? 'underline' : 'none'}
         textDecorationColor={inverted ? '#fff' : 'none'}
         bgClip={inverted ? 'text' : 'none'}

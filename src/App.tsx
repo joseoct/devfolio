@@ -1,9 +1,8 @@
-import { Fade, Flex, Image, HStack, VStack, Tooltip, Box, Text, Link } from '@chakra-ui/react';
+import { Box, Fade, Flex, HStack, Image, Link, Text, Tooltip, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
+import { assets } from './assets';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
 import { Header } from './components/Header';
-
-import { assets } from './assets';
 
 function App() {
 
@@ -23,7 +22,7 @@ function App() {
         <Header />
       </Fade>
 
-      <HStack h="100vh" alignItems="center" justifyContent="center" p={16}>
+      <HStack h="100vh" alignItems="center" justifyContent="center">
         <VStack align="start">
           <DencryptTextEffect
             inverted
@@ -63,7 +62,7 @@ function App() {
               <Box>
                 <Text fontSize="lg" textAlign="center">
                   Born in Brazil, 24 years old, bachelor's degree in Computer Science from the
-                  <Link href="http://www.utfpr.edu.br/" target="_blank" color="purple.300" style={{ textDecoration: "none" }}> Federal Technological University of Paraná.</Link>
+                  <Link href="http://www.utfpr.edu.br/" target="_blank" color="orange.300" style={{ textDecoration: "none" }}> Federal Technological University of Paraná.</Link>
                 </Text>
                 <Text as="p" fontSize="lg" textAlign="center">
                   I love back-end, independent of the programming language, and I am currently deepening into front-end.
@@ -84,7 +83,6 @@ function App() {
                     </Tooltip>
                   </Flex>
                 </Flex>
-
               </Box>
             </Flex>
           </Flex>
@@ -98,10 +96,9 @@ function App() {
             h="100vh"
           >
             {assets.map((asset, index) => (
-              <Box>
+              <Box key={index}>
                 <Tooltip label={asset.name}>
                   <Image
-                    key={index}
                     src={asset.icon}
                     alt="logo"
                   />
@@ -115,4 +112,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

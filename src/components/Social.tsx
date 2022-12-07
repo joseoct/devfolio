@@ -13,7 +13,7 @@ export function Social({ label, href, icon }: SocialProps) {
     <Tooltip label={label} placement="bottom">
       <Link
         _hover={{
-          textColor: 'purple.400',
+          textColor: "orange.100",
         }}
         href={href}
         target="_blank"
