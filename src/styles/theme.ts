@@ -12,6 +12,21 @@ export const theme = extendTheme({
   //     }
   //   }
   // },
+  components: {
+    Menu: {
+      baseStyle: {
+        item: {
+          bg: '#1e1d24',
+          _hover: {
+            bg: '#1b1a20',
+          },
+        },
+        list: {
+          bg: '#1e1d24',
+        },
+      },
+    },
+  },
   config: {
     initialColorMode: 'dark',
   },
@@ -22,7 +37,8 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        bgGradient: 'linear-gradient(to-r, #010004, #08081a)',
+        // bgGradient: 'linear-gradient(to-r, #010004, #08081a)',
+        bg: '#222129',
         color: 'gray.50',
       },
     },
