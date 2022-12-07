@@ -37,8 +37,6 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        // bgGradient: 'linear-gradient(to-r, #010004, #08081a)',
-        bg: '#222129',
         color: 'gray.50',
       },
     },

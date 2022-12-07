@@ -22,7 +22,7 @@ function App() {
         <Header />
       </Fade>
 
-      <HStack h="100vh" alignItems="center" justifyContent="center">
+      <Flex bg="blackAlpha.600" h="100vh" alignItems="center" justifyContent="center">
         <VStack align="start">
           <DencryptTextEffect
             inverted
@@ -46,11 +46,12 @@ function App() {
             time={1500}
           />
         </VStack>
-      </HStack>
+      </Flex>
 
       {
         showContent && (
           <Flex
+            bg="blackAlpha.500"
             id="about-me"
             h="100vh"
             alignItems="center"
@@ -92,8 +93,11 @@ function App() {
       {
         showContent && (
           <Flex
-            id="abilities"
+            bg="blackAlpha.400"
+            id="about-me"
             h="100vh"
+            alignItems="center"
+            justifyContent="center"
           >
             {assets.map((asset, index) => (
               <Box key={index}>

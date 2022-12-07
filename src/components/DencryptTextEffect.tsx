@@ -2,14 +2,14 @@ import { Collapse, Text } from '@chakra-ui/react';
 import { useEffect } from "react";
 import { useDencrypt } from "use-dencrypt-effect";
 
- 
+
 interface DencryptTextEffectProps {
   values: string[];
   fontSize?: string[];
   time: number;
   inverted?: boolean;
 }
- 
+
 export const DencryptTextEffect = ({
   values,
   fontSize,
