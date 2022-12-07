@@ -11,11 +11,12 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       header.current!.style.backgroundColor = `rgba(20, 19, 24, ${window.scrollY / 1000})`;
-      console.log(header.current!.style.backgroundColor);
     };
 
+    window.addEventListener("scroll", handleScroll, true);
+
     return () => {
-      window.addEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScroll, true);
     }
   }, []);
 
