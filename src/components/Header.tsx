@@ -1,4 +1,4 @@
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, ChevronDownIcon } from "@chakra-ui/icons";
 import { Flex, IconButton, Link, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react";
 import { faGithub, faLinkedin, faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { useEffect, useRef, useState } from "react";
@@ -6,21 +6,17 @@ import { Social } from "./Social";
 
 export function Header() {
 
-  const [offsetY, setOffsetY] = useState(0);
   const header = useRef<HTMLDivElement>(null);
-
 
   useEffect(() => {
     const handleScroll = () => {
-      setOffsetY(window.pageYOffset);
-
-      if (header.current) {
-        header.current.style.backgroundColor = `rgba(0, 0, 0, ${offsetY / 300})`;
-      }
+      header.current!.style.backgroundColor = `rgba(20, 19, 24, ${window.scrollY / 1000})`;
     };
 
-    window.addEventListener("scroll", handleScroll);
-  }, [offsetY]);
+    return () => {
+      window.addEventListener("scroll", handleScroll);
+    }
+  }, []);
 
   return (
     <Flex
@@ -57,30 +53,27 @@ export function Header() {
 
       <Menu placement="bottom-end">
         <MenuButton
-          _hover={{
-            textColor: 'purple.400',
-          }}
           as={IconButton}
           aria-label="Options"
           icon={<HamburgerIcon boxSize={8} />}
           variant="ghost"
         />
-        <MenuList bg="#000">
-          <MenuItem>
-            <Link _hover={{ textDecoration: 'none' }} href="" fontSize={24}>
+        <MenuList>
+          <Link _hover={{ textDecoration: 'none' }} href="#about-me" fontSize={20}>
+            <MenuItem>
               Sobre mim
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link _hover={{ textDecoration: 'none' }} href="" fontSize={24}>
+            </MenuItem>
+          </Link>
+          <Link _hover={{ textDecoration: 'none' }} href="" fontSize={20}>
+            <MenuItem>
               Habilidades
-            </Link>
-          </MenuItem>
-          <MenuItem>
-            <Link _hover={{ textDecoration: 'none' }} href="" fontSize={24}>
+            </MenuItem>
+          </Link>
+          <Link _hover={{ textDecoration: 'none' }} href="" fontSize={20}>
+            <MenuItem>
               Portfólio
-            </Link>
-          </MenuItem>
+            </MenuItem>
+          </Link>
         </MenuList>
       </Menu>
     </Flex>
