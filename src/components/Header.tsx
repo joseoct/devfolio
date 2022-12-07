@@ -10,8 +10,8 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (header.current?.style.backgroundColor)
-        header.current!.style.backgroundColor = `rgba(20, 19, 24, ${window.scrollY / 1000})`;
+      header.current!.style.backgroundColor = `rgba(20, 19, 24, ${window.scrollY / 1000})`;
+      console.log(header.current!.style.backgroundColor);
     };
 
     return () => {
