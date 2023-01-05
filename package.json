@@ -1,56 +1,22 @@
 {
-  "name": "ghp-portfolio",
-  "version": "0.1.0",
+  "name": "devfolio",
   "private": true,
-  "homepage": "ghp-portfolio/",
-  "dependencies": {
-    "@chakra-ui/icons": "^2.0.0",
-    "@chakra-ui/react": "^2.0.0",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11",
-    "@fontsource/league-spartan": "^4.5.10",
-    "@fontsource/open-sans": "^4.5.8",
-    "@fontsource/raleway": "^4.5.8",
-    "@fortawesome/fontawesome-svg-core": "^6.1.1",
-    "@fortawesome/free-brands-svg-icons": "^6.1.1",
-    "@fortawesome/react-fontawesome": "^0.1.18",
-    "@testing-library/jest-dom": "^5.16.4",
-    "@testing-library/react": "^13.2.0",
-    "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.1",
-    "@types/node": "^16.11.35",
-    "@types/react": "^18.0.9",
-    "@types/react-dom": "^18.0.4",
-    "framer-motion": "^6",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
-    "react-scripts": "5.0.1",
-    "typescript": "^4.6.4",
-    "use-dencrypt-effect": "^1.0.2",
-    "web-vitals": "^2.1.4"
-  },
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.9",
+    "@vitejs/plugin-react": "^3.0.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.0"
   }
 }
