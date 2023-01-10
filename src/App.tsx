@@ -1,8 +1,9 @@
-import { Box, Fade, Flex, Image, Link, Text, Tooltip, VStack } from '@chakra-ui/react';
+import { Box, Fade, Flex, Image, Link, Progress, Text, Tooltip, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
-import { assets } from './assets';
+import { major, secondary } from './assets';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
 import { Header } from './components/Header';
+import NeovimLogo from './assets/Neovim.svg';
 
 export function App() {
 
@@ -18,11 +19,11 @@ export function App() {
 
   return (
     <Flex direction="column">
-      <Fade in={showContent}>
+      <Fade in={showContent} style={{ zIndex: 5 }}>
         <Header />
       </Fade>
 
-      <Flex bg="blackAlpha.600" h="100vh" alignItems="center" justifyContent="center">
+      <Flex bg="blackAlpha.600" h="100vh" alignItems="center" justifyContent="center" id="home">
         <VStack align="start">
           <DencryptTextEffect
             inverted
@@ -62,7 +63,7 @@ export function App() {
               <Image src={"https://avatars.githubusercontent.com/u/40551163?v=4"} rounded="full" boxSize={['200', '200', '300']} />
               <Box>
                 <Text fontSize="lg" textAlign="center">
-                  Born in Brazil, 24 years old, bachelor's degree in Computer Science from the
+                  Born in Brazil-MG, 24 years old, bachelor's degree in Computer Science from the
                   <Link href="http://www.utfpr.edu.br/" target="_blank" color="orange.300" style={{ textDecoration: "none" }}> Federal Technological University of Paraná.</Link>
                 </Text>
                 <Text as="p" fontSize="lg" textAlign="center">
@@ -76,11 +77,11 @@ export function App() {
                     Currently, my development environment is:
                   </Text>
                   <Flex gap={1}>
-                    <Tooltip label={assets[6].name}>
-                      <Image src={assets[6].icon} boxSize={6} />
+                    <Tooltip label={secondary[3].name}>
+                      <Image src={secondary[3].icon} boxSize={6} />
                     </Tooltip>
-                    <Tooltip label={assets[7].name}>
-                      <Image src={assets[7].icon} boxSize={6} />
+                    <Tooltip label="Neovim">
+                      <Image src={NeovimLogo} boxSize={6} />
                     </Tooltip>
                   </Flex>
                 </Flex>
@@ -94,21 +95,47 @@ export function App() {
         showContent && (
           <Flex
             bg="blackAlpha.400"
-            id="about-me"
+            id="skills"
             h="100vh"
             alignItems="center"
             justifyContent="center"
           >
-            {assets.map((asset, index) => (
-              <Box key={index}>
-                <Tooltip label={asset.name}>
-                  <Image
-                    src={asset.icon}
-                    alt="logo"
-                  />
-                </Tooltip>
-              </Box>
-            ))}
+            <Flex flexDir="column" gap={4} alignItems="center">
+              <Flex w={['sm', 'md', 'xl', '4xl', '6xl']} p="6" bg="blackAlpha.200" rounded={10} flexDir="column">
+                <Text textAlign="center" fontSize="2xl" fontWeight="bold" mb={2}>
+                  Major skills
+                </Text>
+                <Flex flexDir="column" gap={4}>
+                  {
+                    major.map((item, index) => (
+                      <Flex flexDir="column" key={index} gap={2}>
+                        <Flex alignItems="end" gap={2}>
+                          <Image src={item.icon} boxSize={["8", "12", "14"]} />
+                          <Text>{item.name}</Text>
+                        </Flex>
+                        <Progress value={item.knowledge} rounded={4} />
+                      </Flex>
+                    ))
+                  }
+                </Flex>
+              </Flex>
+
+              <Flex w={['sm', 'md', 'xl', '4xl', '6xl']} p="4" bg="blackAlpha.200" rounded={10} flexDir="column" alignItems="center">
+                <Text textAlign="center" fontSize="lg" mb={4}>
+                  I am familiar with
+                </Text>
+                <Flex gap={["3", "6", "8", "16", "16"]}>
+                  {
+                    secondary.map((item, index) => (
+                      <Flex flexDir="column" alignItems="center" key={index}>
+                        <Image src={item.icon} boxSize={["8", "8", "8", "12", "12"]} />
+                        <Text display={["none", "block", "block", "block", "block"]} fontSize="xs">{item.name}</Text>
+                      </Flex>
+                    ))
+                  }
+                </Flex>
+              </Flex>
+            </Flex>
           </Flex>
         )
       }

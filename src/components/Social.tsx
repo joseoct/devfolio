@@ -10,7 +10,7 @@ interface SocialProps {
 
 export function Social({ label, href, icon }: SocialProps) {
   return (
-    <Tooltip label={label} placement="bottom">
+    <Tooltip label={label} placement="bottom" zIndex={999}>
       <Link
         _hover={{
           textColor: "orange.100",

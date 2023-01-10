@@ -9,18 +9,48 @@ import Linux from './Linux.svg';
 import NodeJS from './NodeJS.svg';
 import ReactQuery from './ReactQuery.svg';
 import React from './React.svg';
-import RestApi from './RestApi.svg';
+import SQL from './Sql.svg';
 import TypeScript from './TypeScript.svg';
-import Neovim from './Neovim.svg';
+import Vim from './Vim.svg';
+import GraphQL from './GraphQL.svg';
 
-export const assets = [
+export const major = [
+  {
+    name: 'JavaScript',
+    icon: JavaScript,
+    knowledge: 93
+  },
+  {
+    name: 'TypeScript',
+    icon: TypeScript,
+    knowledge: 87
+  },
+  {
+    name: 'NodeJS',
+    icon: NodeJS,
+    knowledge: 80
+  },
+  {
+    name: 'React | React Native',
+    icon: React,
+    knowledge: 75
+  },
+  {
+    name: 'HTML',
+    icon: Html,
+    knowledge: 72
+  },
+  {
+    name: 'CSS',
+    icon: Css,
+    knowledge: 72
+  },
+];
+
+export const secondary = [
   {
     name: 'Angular',
     icon: Angular,
-  },
-  {
-    name: 'Css',
-    icon: Css,
   },
   {
     name: 'Docker',
@@ -31,43 +61,27 @@ export const assets = [
     icon: Git,
   },
   {
-    name: 'Html',
-    icon: Html,
-  },
-  {
-    name: 'JavaScript',
-    icon: JavaScript,
-  },
-  {
     name: 'Linux',
     icon: Linux,
   },
   {
-    name: 'Neovim',
-    icon: Neovim,
+    name: 'Vim',
+    icon: Vim,
   },
   // {
   //   name: 'NestJS',
   //   icon: NestJS,
   // },
   {
-    name: 'NodeJS',
-    icon: NodeJS,
-  },
-  {
-    name: 'React',
-    icon: React,
-  },
-  {
     name: 'ReactQuery',
     icon: ReactQuery,
   },
   {
-    name: 'RestApi',
-    icon: RestApi,
+    name: 'SQL',
+    icon: SQL,
   },
   {
-    name: 'TypeScript',
-    icon: TypeScript,
+    name: 'GraphQL',
+    icon: GraphQL,
   },
-];
+]

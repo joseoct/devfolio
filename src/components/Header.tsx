@@ -32,7 +32,7 @@ export function Header() {
       justifyContent="space-around"
     >
       <Flex gap={8} alignItems="center">
-        <Text fontSize={24}>DevFolio</Text>
+        <Link fontSize={24} href="#home">Devfolio</Link>
 
         <Flex gap={4}>
           <Social
@@ -59,21 +59,22 @@ export function Header() {
           aria-label="Options"
           icon={<HamburgerIcon boxSize={8} />}
           variant="ghost"
+          _hover={{ bg: "transparent", textColor: "orange.100" }}
         />
         <MenuList>
           <Link _hover={{ textDecoration: 'none' }} href="#about-me" fontSize={20}>
             <MenuItem>
-              Sobre mim
+              About me
+            </MenuItem>
+          </Link>
+          <Link _hover={{ textDecoration: 'none' }} href="#skills" fontSize={20}>
+            <MenuItem>
+              Skills
             </MenuItem>
           </Link>
           <Link _hover={{ textDecoration: 'none' }} href="" fontSize={20}>
             <MenuItem>
-              Habilidades
-            </MenuItem>
-          </Link>
-          <Link _hover={{ textDecoration: 'none' }} href="" fontSize={20}>
-            <MenuItem>
-              Portfólio
+              ?
             </MenuItem>
           </Link>
         </MenuList>
