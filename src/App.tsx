@@ -6,6 +6,7 @@ import { DencryptTextEffect } from './components/DencryptTextEffect';
 import { Header } from './components/Header';
 import NeovimLogo from './assets/Neovim.svg';
 import Carousel from './components/Carousel';
+import { LinkProject } from './components/LinkProject';
 
 export function App() {
 
@@ -152,14 +153,54 @@ export function App() {
             flexDir={['column', 'column', 'row']}
             gap={4}
           >
-            <Flex maxWidth={800} gap={8} alignItems="center" justifyContent="center" flexDir={['column', 'column', 'row']} margin={8}>
-              <Flex flexDir="column" textAlign="center">
-                <Text fontSize="2xl">
+            <Flex gap={8} alignItems="center" justifyContent="center" flexDir={['column', 'column', 'row']} margin={8}>
+              <Flex flexDir="column">
+
+                <Flex justifyContent="center" fontSize="2xl">
                   Featured Project
-                  <StarIcon ml={2} mb={2} textColor="yellow.400" />
-                </Text>
-                <Text fontSize="lg">
-                  eai galera
+                  <StarIcon mx={2} textColor="yellow.400" />
+                  <Text fontWeight="extrabold">frame</Text><Text fontWeight="extrabold" textColor="purple.400">aux</Text>
+                </Flex>
+
+                <Text fontSize="lg" maxWidth={600} textAlign="center">
+                  As my most complex project, I present my final paper for obtaining the bachelor's degree in computer science: App to support the learning of cross-platform development technologies(like ReactNative, Flutter, Ionic) for mobile devices using the
+                  <LinkProject href="https://en.wikipedia.org/wiki/Spaced_repetition"> Spaced Repetition Methodology </LinkProject>
+                  and inspired by the
+                  <LinkProject href="https://www.duolingo.com/"> Duolingo </LinkProject>
+                  application. <br /> The project was divided in three parts: <br />
+                  Backend, used to manipulate data from the technologies, made with
+                  <LinkProject href="https://nodejs.org/en/"> NodeJS</LinkProject>
+                  (Rest Api with Express),
+                  <LinkProject href="https://www.prisma.io/"> Prisma</LinkProject>,
+                  <LinkProject href="https://www.postgresql.org/"> Postgres</LinkProject>,
+                  <LinkProject href="https://jwt.io/"> JWT </LinkProject>
+                  and
+                  <LinkProject href="https://www.typescriptlang.org/"> TypeScript</LinkProject>.
+                  <br />
+                  Fontend, used for the content management of the technologies, made with
+                  <LinkProject href="https://reactjs.org/"> React</LinkProject>
+                  (<LinkProject href="https://nextjs.org/">Next.js</LinkProject>),
+                  <LinkProject href="https://react-query-v3.tanstack.com/"> React Query</LinkProject>,
+                  <LinkProject href="https://chakra-ui.com/"> Chakra UI</LinkProject>,
+                  <LinkProject href="https://jwt.io/"> JWT </LinkProject>
+                  and
+                  <LinkProject href="https://www.typescriptlang.org/"> TypeScript</LinkProject>.
+                  <br />
+                  App, used by the students to practice the exercises, was developed using
+                  <LinkProject href="https://reactnative.dev/"> ReactNative</LinkProject>
+                  (<LinkProject href="https://expo.dev/">Expo</LinkProject>),
+                  <LinkProject href="https://react-query-v3.tanstack.com/"> React Query</LinkProject>,
+                  <LinkProject href="https://nativebase.io/"> NativeBase</LinkProject>,
+                  <LinkProject href="https://jwt.io/"> JWT </LinkProject>
+                  and
+                  <LinkProject href="https://www.typescriptlang.org/"> TypeScript</LinkProject>.
+                  <br />
+                  If you are interested:
+                  <LinkProject href="https://drive.google.com/file/d/1wNvaCHskW_Ky1QivsNj1tYBnb6Hm9ljS/view?usp=sharing"> link </LinkProject>
+                  to the final paper and
+                  <LinkProject href="https://youtu.be/LfmdWFlj1kk"> link </LinkProject>
+                  to a video for a better explanation of the project. <br />All code repositories are available on
+                  <LinkProject href="https://github.com/joseoct?tab=repositories&q=frameaux&type=&language=&sort="> my github </LinkProject>
                 </Text>
               </Flex>
               <Carousel />
