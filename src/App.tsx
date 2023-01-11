@@ -1,9 +1,11 @@
-import { Box, Fade, Flex, Image, Link, Progress, Text, Tooltip, VStack } from '@chakra-ui/react';
 import { useEffect, useState } from 'react';
+import { Box, Fade, Flex, Image, Link, Progress, Text, Tooltip, VStack } from '@chakra-ui/react';
+import { StarIcon } from '@chakra-ui/icons'
 import { major, secondary } from './assets';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
 import { Header } from './components/Header';
 import NeovimLogo from './assets/Neovim.svg';
+import Carousel from './components/Carousel';
 
 export function App() {
 
@@ -110,7 +112,7 @@ export function App() {
                     major.map((item, index) => (
                       <Flex flexDir="column" key={index} gap={2}>
                         <Flex alignItems="end" gap={2}>
-                          <Image src={item.icon} boxSize={["8", "12", "14"]} />
+                          <Image src={item.icon} boxSize={["8", "12", "12"]} />
                           <Text>{item.name}</Text>
                         </Flex>
                         <Progress value={item.knowledge} rounded={4} />
@@ -128,14 +130,41 @@ export function App() {
                   {
                     secondary.map((item, index) => (
                       <Flex flexDir="column" alignItems="center" key={index}>
-                        <Image src={item.icon} boxSize={["8", "8", "8", "12", "12"]} />
+                        <Image src={item.icon} boxSize={["8", "8", "8", "10", "10"]} />
                         <Text display={["none", "block", "block", "block", "block"]} fontSize="xs">{item.name}</Text>
                       </Flex>
                     ))
                   }
                 </Flex>
+              </Flex> </Flex>
+          </Flex>
+        )
+      }
+
+      {
+        showContent && (
+          <Flex
+            bg="blackAlpha.300"
+            id="skills"
+            h="100vh"
+            alignItems="center"
+            justifyContent="center"
+            flexDir={['column', 'column', 'row']}
+            gap={4}
+          >
+            <Flex maxWidth={800} gap={8} alignItems="center" justifyContent="center" flexDir={['column', 'column', 'row']} margin={8}>
+              <Flex flexDir="column" textAlign="center">
+                <Text fontSize="2xl">
+                  Featured Project
+                  <StarIcon ml={2} mb={2} textColor="yellow.400" />
+                </Text>
+                <Text fontSize="lg">
+                  eai galera
+                </Text>
               </Flex>
+              <Carousel />
             </Flex>
+
           </Flex>
         )
       }
