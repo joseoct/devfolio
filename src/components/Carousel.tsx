@@ -7,7 +7,6 @@ import Slider from 'react-slick';
 
 // Settings for the slider
 const settings = {
-  dots: true,
   arrows: false,
   fade: true,
   infinite: true,
@@ -29,24 +28,19 @@ export default function Carousel() {
 
   // These are the images used in the slide
   const cards = [
-    "app1.png",
-    "app2.png",
-    "app3.png",
-    "app4.png",
-    "app5.png",
-    "app6.png",
-    "app7.png",
-    "app8.png",
-    "app9.png",
+    'app1.png',
+    'app2.png',
+    'app3.png',
+    'app4.png',
+    'app5.png',
+    'app6.png',
+    'app7.png',
+    'app8.png',
+    'app9.png',
   ];
 
   return (
-    <Box
-      position={'relative'}
-      height={'600px'}
-      width="sm"
-      overflow={'hidden'}
-    >
+    <Box position={'relative'} height={'xl'} width="sm" overflow={'hidden'}>
       {/* CSS files for react-slick */}
       <link
         rel="stylesheet"
@@ -70,7 +64,8 @@ export default function Carousel() {
         transform={'translate(0%, -50%)'}
         zIndex={2}
         bg="whiteAlpha.500"
-        onClick={() => slider?.slickPrev()}>
+        onClick={() => slider?.slickPrev()}
+      >
         <ArrowLeftIcon />
       </IconButton>
       {/* Right Icon */}
@@ -84,7 +79,8 @@ export default function Carousel() {
         transform={'translate(0%, -50%)'}
         zIndex={2}
         bg="whiteAlpha.500"
-        onClick={() => slider?.slickNext()}>
+        onClick={() => slider?.slickNext()}
+      >
         <ArrowRightIcon />
       </IconButton>
       {/* Slider */}
@@ -101,6 +97,6 @@ export default function Carousel() {
           />
         ))}
       </Slider>
-    </Box >
+    </Box>
   );
 }

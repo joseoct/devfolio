@@ -2,7 +2,6 @@ import { extendTheme } from '@chakra-ui/react';
 import '@fontsource/league-spartan';
 
 export const theme = extendTheme({
-
   // components: {
   //   Select: {
   //     baseStyle: {
@@ -38,7 +37,7 @@ export const theme = extendTheme({
   styles: {
     global: {
       body: {
-        color: 'gray.50',
+        color: 'gray.300',
         boxSizing: 'border-box',
       },
     },
