@@ -4,6 +4,7 @@ import { Box, IconButton, useBreakpointValue } from '@chakra-ui/react';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
+import { appImages } from '../assets/app/index';
 
 // Settings for the slider
 const settings = {
@@ -25,19 +26,6 @@ export default function Carousel() {
   // These are the breakpoints which changes the position of the
   // buttons as the screen size changes
   const top = useBreakpointValue({ base: '90%', md: '50%' });
-
-  // These are the images used in the slide
-  const cards = [
-    'app1.png',
-    'app2.png',
-    'app3.png',
-    'app4.png',
-    'app5.png',
-    'app6.png',
-    'app7.png',
-    'app8.png',
-    'app9.png',
-  ];
 
   return (
     <Box position={'relative'} height={'xl'} width="sm" overflow={'hidden'}>
@@ -85,7 +73,7 @@ export default function Carousel() {
       </IconButton>
       {/* Slider */}
       <Slider {...settings} ref={(slider) => setSlider(slider)}>
-        {cards.map((url, index) => (
+        {appImages.map((url, index) => (
           <Box
             key={index}
             height={'xl'}
@@ -93,7 +81,7 @@ export default function Carousel() {
             backgroundPosition="center"
             backgroundRepeat="no-repeat"
             backgroundSize="contain"
-            backgroundImage={`url(/src/assets/app/${url})`}
+            backgroundImage={url}
           />
         ))}
       </Slider>
