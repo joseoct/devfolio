@@ -34,6 +34,7 @@ export const DencryptTextEffect = ({
       <Text
         // bgGradient="linear(to-l, #7928CA, #FF0080)"
         bg="orange.300"
+        textColor="white"
         textDecoration={inverted ? 'underline' : 'none'}
         textDecorationColor={inverted ? '#fff' : 'none'}
         bgClip={inverted ? 'text' : 'none'}

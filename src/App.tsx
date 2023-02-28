@@ -24,7 +24,7 @@ export function App() {
   useEffect(() => {
     setTimeout(() => {
       return setShowContent(true);
-    }, 0);
+    }, 3000);
   }, []);
 
   return (
