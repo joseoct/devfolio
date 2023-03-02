@@ -4,7 +4,6 @@ import { Box, IconButton, useBreakpointValue } from '@chakra-ui/react';
 import { ArrowLeftIcon, ArrowRightIcon } from '@chakra-ui/icons';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
-import { appImages } from '../assets/app/index';
 
 // Settings for the slider
 const settings = {
@@ -18,7 +17,11 @@ const settings = {
   slidesToScroll: 1,
 };
 
-export default function Carousel() {
+interface CarouselProps {
+  appImages: string[];
+}
+
+export default function Carousel({ appImages }: CarouselProps) {
   // As we have used custom buttons, we need a reference variable to
   // change the state
   const [slider, setSlider] = React.useState<Slider | null>(null);

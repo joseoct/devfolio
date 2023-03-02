@@ -2,13 +2,11 @@ import { HamburgerIcon } from '@chakra-ui/icons';
 import {
   Flex,
   IconButton,
-  Text,
   Link,
   Menu,
   MenuButton,
   MenuItem,
   MenuList,
-  Image,
   useBreakpointValue,
 } from '@chakra-ui/react';
 import {
@@ -23,9 +21,9 @@ import { Social } from './Social';
 export function Header() {
   const header = useRef<HTMLDivElement>(null);
 
-  const isMobile = useBreakpointValue({
+  const isLg = useBreakpointValue({
     base: true,
-    sm: false,
+    lg: false,
   });
 
   useEffect(() => {
@@ -77,7 +75,7 @@ export function Header() {
         </Flex>
       </Flex>
 
-      {isMobile ? (
+      {isLg ? (
         <Menu placement="bottom-end">
           <MenuButton
             as={IconButton}
@@ -103,10 +101,17 @@ export function Header() {
             </Link>
             <Link
               _hover={{ textDecoration: 'none' }}
-              href="#project"
+              href="#featured-project"
               fontSize={20}
             >
-              <MenuItem>Project</MenuItem>
+              <MenuItem>Featured Project</MenuItem>
+            </Link>
+            <Link
+              _hover={{ textDecoration: 'none' }}
+              href="#extension-project"
+              fontSize={20}
+            >
+              <MenuItem>University extension project</MenuItem>
             </Link>
             <Link
               _hover={{ textDecoration: 'none' }}
@@ -121,8 +126,9 @@ export function Header() {
         <Flex gap={8}>
           <NavItem title="About" index={1} href="#about-me" />
           <NavItem title="Skills" index={2} href="#skills" />
-          <NavItem title="Featured Project" index={3} href="#project" />
-          <NavItem title="Contact me" index={4} href="#contact" />
+          <NavItem title="Featured Project" index={3} href="#featured-project" />
+          <NavItem title="University extension project" index={4} href="#extension-project" />
+          <NavItem title="Contact me" index={5} href="#contact" />
         </Flex>
       )}
     </Flex>
