@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {
   Box,
+  Button,
   Fade,
   Flex,
   Image,
@@ -10,6 +11,7 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { major, secondary } from './assets';
+import { DownloadIcon } from '@chakra-ui/icons';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
 import { Header } from './components/Header';
 import Carousel from './components/Carousel';
@@ -38,10 +40,12 @@ export function App() {
       <Flex
         bg="blackAlpha.600"
         minH="100vh"
+        flexDir="column"
         alignItems="center"
-        justifyContent="center"
+        justifyContent="space-between"
         id="home"
       >
+        <div />
         <VStack align="start">
           <DencryptTextEffect
             inverted
@@ -65,6 +69,16 @@ export function App() {
             time={1500}
           />
         </VStack>
+        <Fade in={showContent} style={{ marginBottom: '16px' }}>
+          <Link
+            href="../public/joseoctaviocurriculo.pdf"
+            download
+            target="_blank"
+            style={{ textDecoration: 'none' }}
+          >
+            <Button size="md">Download CV</Button>
+          </Link>
+        </Fade>
       </Flex>
 
       {showContent && (
@@ -396,6 +410,16 @@ export function App() {
                 Currently looking for new opportunities, my inbox is always
                 open.
               </Text>
+              <Flex justifyContent="center" mt={4}>
+                <Link
+                  href="../public/joseoctaviocurriculo.pdf"
+                  download
+                  target="_blank"
+                  style={{ textDecoration: 'none' }}
+                >
+                  <Button size="md">Download CV</Button>
+                </Link>
+              </Flex>
               <Flex justifyContent="center" gap={4} mt={4}>
                 <Social
                   label="LinkedIn"

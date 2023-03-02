@@ -38,7 +38,6 @@ export const theme = extendTheme({
     global: {
       body: {
         color: 'gray.300',
-        boxSizing: 'border-box',
       },
     },
   },
