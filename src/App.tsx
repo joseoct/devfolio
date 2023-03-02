@@ -20,6 +20,7 @@ import { Social } from './components/Social';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { appImages } from './assets/app/index';
 import { app2Images } from './assets/app2/index';
+import pdf from '../joseoctaviocurriculo.pdf';
 
 export function App() {
   const [showContent, setShowContent] = useState(false);
@@ -70,7 +71,7 @@ export function App() {
         </VStack>
         <Fade in={showContent} style={{ marginBottom: '16px' }}>
           <Link
-            href="joseoctaviocurriculo.pdf"
+            href={pdf}
             download
             target="_blank"
             style={{ textDecoration: 'none' }}
