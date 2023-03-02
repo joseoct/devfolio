@@ -11,7 +11,6 @@ import {
   VStack,
 } from '@chakra-ui/react';
 import { major, secondary } from './assets';
-import { DownloadIcon } from '@chakra-ui/icons';
 import { DencryptTextEffect } from './components/DencryptTextEffect';
 import { Header } from './components/Header';
 import Carousel from './components/Carousel';
@@ -71,7 +70,7 @@ export function App() {
         </VStack>
         <Fade in={showContent} style={{ marginBottom: '16px' }}>
           <Link
-            href="../public/joseoctaviocurriculo.pdf"
+            href="joseoctaviocurriculo.pdf"
             download
             target="_blank"
             style={{ textDecoration: 'none' }}
