@@ -17,6 +17,8 @@ import { LinkProject } from './components/LinkProject';
 import { SectionTitle } from './components/SectionTitle';
 import { Social } from './components/Social';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { appImages } from './assets/app/index';
+import { app2Images } from './assets/app2/index';
 
 export function App() {
   const [showContent, setShowContent] = useState(false);
@@ -35,7 +37,7 @@ export function App() {
 
       <Flex
         bg="blackAlpha.600"
-        h="100vh"
+        minH="100vh"
         alignItems="center"
         justifyContent="center"
         id="home"
@@ -69,7 +71,7 @@ export function App() {
         <Flex
           bg="blackAlpha.500"
           id="about-me"
-          h="100vh"
+          minH="100vh"
           alignItems="center"
           justifyContent="center"
         >
@@ -81,7 +83,7 @@ export function App() {
             flexDir={['column', 'column', 'row']}
             margin={8}
           >
-            <Box>
+            <Box justifyContent="start">
               <SectionTitle title="About me" index={1} />
               <Text fontSize="xl" textAlign="start">
                 Hello! I am José Octávio, 24 years old, software developer based
@@ -118,7 +120,7 @@ export function App() {
         <Flex
           bg="blackAlpha.400"
           id="skills"
-          h="100vh"
+          minH="100vh"
           alignItems="center"
           justifyContent="center"
         >
@@ -178,8 +180,8 @@ export function App() {
       {showContent && (
         <Flex
           bg="blackAlpha.300"
-          id="project"
-          h={['150vh', '130vh', '100vh', '100vh', '100vh']}
+          id="featured-project"
+          minH="100vh"
           alignItems="center"
           justifyContent="center"
           flexDir={['column', 'column', 'row']}
@@ -195,7 +197,7 @@ export function App() {
             <Flex flexDir="column">
               <SectionTitle title="Featured Project" index={3} />
 
-              <Text fontSize="lg" maxWidth={600} textAlign="start">
+              <Text fontSize="lg" maxWidth={600} textAlign="start" p="4">
                 As my most complex project, I present my final paper for
                 obtaining the bachelor's degree in computer science: App to
                 support the learning of cross-platform development
@@ -210,12 +212,15 @@ export function App() {
                   {' '}
                   Duolingo{' '}
                 </LinkProject>
-                application. <br />{' '}
-                <Text textAlign="center" fontWeight="bold">
-                  The project was divided in three parts:{' '}
+                application. <br /> <br />
+                <Text fontWeight="bold">
+                  • Backend -
+                  <LinkProject href="https://github.com/joseoct/frameaux-backend#backend">
+                    {' '}
+                    Link for all explanation
+                  </LinkProject>
                 </Text>
-                Backend, used to manipulate data from the technologies, made
-                with
+                Used to manipulate data from the technologies, made with
                 <LinkProject href="https://nodejs.org/en/"> NodeJS</LinkProject>
                 (Rest Api with Express),
                 <LinkProject href="https://www.prisma.io/"> Prisma</LinkProject>
@@ -232,8 +237,14 @@ export function App() {
                 </LinkProject>
                 .
                 <br />
-                Fontend, used for the content management of the technologies,
-                made with
+                <Text fontWeight="bold">
+                  • Frontend -{' '}
+                  <LinkProject href="https://github.com/joseoct/frameaux-web#frontend">
+                    {' '}
+                    Link for all explanation
+                  </LinkProject>
+                </Text>
+                Used for the content management of the technologies, made with
                 <LinkProject href="https://reactjs.org/"> React</LinkProject>(
                 <LinkProject href="https://nextjs.org/">Next.js</LinkProject>),
                 <LinkProject href="https://react-query-v3.tanstack.com/">
@@ -253,8 +264,15 @@ export function App() {
                 </LinkProject>
                 .
                 <br />
-                App, used by the students to practice the exercises, was
-                developed using
+                <Text fontWeight="bold">
+                  • Mobile App -
+                  <LinkProject href="https://github.com/joseoct/frameaux-mobile#mobile">
+                    {' '}
+                    Link for all explanation
+                  </LinkProject>
+                </Text>
+                Used by the students to practice the exercises, was developed
+                using
                 <LinkProject href="https://reactnative.dev/">
                   {' '}
                   ReactNative
@@ -277,6 +295,7 @@ export function App() {
                 </LinkProject>
                 .
                 <br />
+                <br />
                 If you are interested:
                 <LinkProject href="https://drive.google.com/file/d/1wNvaCHskW_Ky1QivsNj1tYBnb6Hm9ljS/view?usp=sharing">
                   {' '}
@@ -287,24 +306,69 @@ export function App() {
                   {' '}
                   link{' '}
                 </LinkProject>
-                to a video for a better explanation of the project. <br />
-                All code repositories are available on
+                to a video for a better explanation of the project. All code
+                repositories are available on
                 <LinkProject href="https://github.com/joseoct?tab=repositories&q=frameaux&type=&language=&sort=">
                   {' '}
                   my github{' '}
                 </LinkProject>
               </Text>
             </Flex>
-            <Carousel />
+            <Carousel appImages={appImages} />
           </Flex>
         </Flex>
       )}
 
       {showContent && (
         <Flex
-          bg="blackAlpha.500"
+          bg="blackAlpha.200"
+          id="extension-project"
+          h={['220vh', '130vh', '100vh', '100vh', '100vh']}
+          alignItems="center"
+          justifyContent="center"
+          flexDir={['column', 'column', 'row']}
+          gap={4}
+        >
+          <Flex
+            gap={8}
+            alignItems="center"
+            justifyContent="center"
+            flexDir={['column', 'column', 'row']}
+            margin={8}
+          >
+            <Carousel appImages={app2Images} />
+            <Flex flexDir="column">
+              <SectionTitle title="Extension project" index={4} />
+
+              <Text fontSize="lg" maxWidth={600} textAlign="start" p={4}>
+                At the university, in extension projects We were given the
+                challenge of trying to solve a problem for a large company, in
+                this case the largest paper company in Brazil, Klabin. <br />{' '}
+                The problem was: to develop a tool used by the operation and
+                maintenance to guarantee the blocking of dangerous energy, thus
+                guaranteeing the safety of operators and maintainers. <br /> As
+                a solution, we presented an application that initially had to
+                catalog all the plant's sub-areas and their respective
+                procedures to ensure the safe maintenance of the plant. <br />
+                <br />
+                <strong>• Mobile App</strong> <br />
+                The mobile app has only the responsibility of registering,
+                deleting and editing the procedures of a certain sub-area that
+                was registered by an administrator. <br />
+                <strong>• Web App</strong> <br />
+                The administrator's area in which he has the responsibility to
+                register, delete and edit subareas.
+              </Text>
+            </Flex>
+          </Flex>
+        </Flex>
+      )}
+
+      {showContent && (
+        <Flex
+          bg="blackAlpha.600"
           id="contact"
-          h="100vh"
+          minH="100vh"
           alignItems="center"
           justifyContent="space-between"
           flexDir="column"
@@ -319,7 +383,7 @@ export function App() {
             margin={8}
           >
             <Box>
-              <SectionTitle title="Contact Me!" index={4} contact />
+              <SectionTitle title="Contact Me!" index={5} contact />
               <Text
                 fontSize={['4xl', '4xl', '6xl', '6xl']}
                 textAlign="center"
