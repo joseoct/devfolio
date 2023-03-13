@@ -20,7 +20,7 @@ import { Social } from './components/Social';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { appImages } from './assets/app/index';
 import { app2Images } from './assets/app2/index';
-import pdf from '../joseoctaviocurriculo.pdf';
+import pdf from '../dev-joseoctavio-cv.pdf';
 
 export function App() {
   const [showContent, setShowContent] = useState(false);
