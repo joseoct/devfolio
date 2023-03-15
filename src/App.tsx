@@ -412,7 +412,7 @@ export function App() {
               </Text>
               <Flex justifyContent="center" mt={4}>
                 <Link
-                  href="../public/joseoctaviocurriculo.pdf"
+                  href={pdf}
                   download
                   target="_blank"
                   style={{ textDecoration: 'none' }}
