@@ -371,7 +371,8 @@ export function App() {
                 was registered by an administrator. <br />
                 <strong>• Web App</strong> <br />
                 The administrator's area in which he has the responsibility to
-                register, delete and edit subareas.
+                register, delete and edit subareas. <br /><br />
+                <LinkProject href="https://github.com/joseoct/backend-klabin-procedures" children="Link to repository and all screens" />
               </Text>
             </Flex>
           </Flex>
