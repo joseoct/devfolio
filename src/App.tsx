@@ -20,7 +20,7 @@ import { Social } from './components/Social';
 import { faLinkedin, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { appImages } from './assets/app/index';
 import { app2Images } from './assets/app2/index';
-import pdf from '../dev-joseoctavio-cv.pdf';
+import pdf from '../cv-jose-octavio.pdf';
 
 export function App() {
   const [showContent, setShowContent] = useState(false);
@@ -371,8 +371,12 @@ export function App() {
                 was registered by an administrator. <br />
                 <strong>• Web App</strong> <br />
                 The administrator's area in which he has the responsibility to
-                register, delete and edit subareas. <br /><br />
-                <LinkProject href="https://github.com/joseoct/backend-klabin-procedures" children="Link to repository and all screens" />
+                register, delete and edit subareas. <br />
+                <br />
+                <LinkProject
+                  href="https://github.com/joseoct/backend-klabin-procedures"
+                  children="Link to repository and all screens"
+                />
               </Text>
             </Flex>
           </Flex>
